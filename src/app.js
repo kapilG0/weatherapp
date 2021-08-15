@@ -18,7 +18,7 @@ app.get('/',(req,res)=>{
 })
 app.get('/help',(req,res)=>{
     res.render('help',{
-        helptext:'drop mail on kapilkggupta2@gmail.com',
+        helptext:'mail on kapilkggupta2@gmail.com',
         title:'help',
         name:'k'
     })
