@@ -4,7 +4,6 @@ const messageOne=document.getElementById('message-1')
 const messageTwo=document.getElementById('message-2')
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
-    // console.log(search.value)
     const location=search.value
     messageOne.textContent=''
     messageTwo.textContent=''
