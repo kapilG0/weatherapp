@@ -2,6 +2,7 @@ const express=require('express')
 const path=require('path')
 const hbs=require('hbs')
 const app=express()
+const port=process.env.PORT || 3000;
 const view=path.join(__dirname,'../templates/views')
 const partials=path.join(__dirname,'../templates/partials')
 const geocode=require('./utils/geocode')
@@ -47,8 +48,8 @@ console.log(address,'addrss')
 
                return res.send({error})
             }
-            console.log(location)
-            console.log(Data,'data')
+            // console.log(location)
+            // console.log(Data,'data')
             res.send({
                 forecast:Data,
                 location:location,
@@ -74,6 +75,6 @@ app.get('*',(req,res)=>{
         errorMessage:'Page not found'
     })
 })
-app.listen(3000,()=>{
-    console.log('server')
+app.listen(port,()=>{
+    console.log('server',port)
 })
